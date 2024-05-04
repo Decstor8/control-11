@@ -35,4 +35,5 @@ productsRouter.get('/', async (_req, res, next) => {
     }
 });
 
+
 export default productsRouter;

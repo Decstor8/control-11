@@ -2,7 +2,7 @@ import {Schema, model, Types} from "mongoose";
 import {ProductsTypes} from "../types";
 import User from "./User";
 
-const ProductSchema = new Schema<ProductsTypes>({
+const ProductsSchema = new Schema<ProductsTypes>({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
@@ -13,7 +13,7 @@ const ProductSchema = new Schema<ProductsTypes>({
 
                 return Boolean(user);
             },
-            message: 'User not found!',
+            message: 'Пользователь не найден!',
         },
     },
     title: {
@@ -40,5 +40,5 @@ const ProductSchema = new Schema<ProductsTypes>({
     }
 });
 
-const Product = model('Products', ProductSchema);
-export default Product;
+const Products = model('Products', ProductsSchema);
+export default Products;
