@@ -1,7 +1,3 @@
-export interface MainErr {
-    error: string;
-}
-
 export interface RegisterMutation {
     username: string;
     password: string;
@@ -39,10 +35,28 @@ export interface RegisterResponse {
     user: UserTypes;
 }
 
+export interface MainErr {
+    error: string;
+}
+
 export interface ProductTypes {
     title: string;
     description: string;
     price: number;
     image: string | null;
     category: string;
+}
+
+export interface ProductsItem {
+    _id: string;
+    title: string;
+    description: string;
+    price: number;
+    image: string | null;
+    category: string;
+    user: {
+        _id: string;
+        displayName: string;
+        phone: string;
+    }
 }

@@ -53,15 +53,16 @@ const Register = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              color: '#0a8a3b', // Зеленый текст
             }}
         >
-          <Avatar sx={{m: 1, bgcolor: 'secondary.main'}}>
+          <Avatar sx={{ m: 1, bgcolor: '#34a853' }}> // Более темный зеленый для аватара
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h5" color="green">
             Sign up
           </Typography>
-          <Box component="form" onSubmit={submitFormHandler} sx={{mt: 3}}>
+          <Box component="form" onSubmit={submitFormHandler} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
@@ -74,6 +75,7 @@ const Register = () => {
                     error={Boolean(getFieldError('username'))}
                     helperText={getFieldError('username')}
                     fullWidth
+                    sx={{ input: { color: '#0a8a3b' } }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -88,6 +90,7 @@ const Register = () => {
                     error={Boolean(getFieldError('password'))}
                     helperText={getFieldError('password')}
                     fullWidth
+                    sx={{ input: { color: '#0a8a3b' } }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -101,6 +104,7 @@ const Register = () => {
                     error={Boolean(getFieldError('displayName'))}
                     helperText={getFieldError('displayName')}
                     fullWidth
+                    sx={{ input: { color: '#0a8a3b' } }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -114,6 +118,7 @@ const Register = () => {
                     error={Boolean(getFieldError('phone'))}
                     helperText={getFieldError('phone')}
                     fullWidth
+                    sx={{ input: { color: '#0a8a3b' } }}
                 />
               </Grid>
             </Grid>
@@ -121,13 +126,13 @@ const Register = () => {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{mt: 3, mb: 2}}
+                sx={{ mt: 3, mb: 2, bgcolor: '#34a853', '&:hover': { bgcolor: '#0a8a3b' } }} // Зеленые кнопки
             >
               Sign Up
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link component={RouterLink} to="/login" variant="body2">
+                <Link component={RouterLink} to="/login" variant="body2" sx={{ color: '#0a8a3b' }}>
                   Already have an account? Sign in
                 </Link>
               </Grid>
